@@ -47,3 +47,18 @@ li > button:hover {
   box-shadow: inset 0 0 45px var(--main-white);
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}
+
+.drop-down-button {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: 10fr 1fr;
+}
+
+.drop-down-icon {
+  width: 2vw;
+}
