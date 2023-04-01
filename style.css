@@ -11,6 +11,12 @@
   --main-white: #fef2f2;
 }
 
+body {
+  background-color: var(--main-white);
+  font-family: Verdana, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
 nav {
   background-color: var(--main-color);
   width: 100%;
@@ -34,6 +40,7 @@ li > button {
   height: 2vw;
   border: none;
   border-radius: 10px;
+  font-size: 1rem;
 }
 
 li > button:hover {
