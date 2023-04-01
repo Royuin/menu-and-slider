@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: inherit;
 }
+
+:root {
+  --main-color: #dc2626;
+}
+
+nav {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 5vw;
+}
