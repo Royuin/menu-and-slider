@@ -154,8 +154,17 @@ li:hover {
   margin-top: 200px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .slide-img {
   width: 250px;
+}
+
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--main-white);
+  border: none;
+  cursor: pointer;
 }
