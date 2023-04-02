@@ -10,12 +10,20 @@
   --lighter-main: #f87171;
   --pale-main-color: #fca5a5;
   --main-white: #fef2f2;
+  --darkest-main: #450a0a;
 }
 
 body {
   background-color: var(--main-white);
   font-family: Verdana, Helvetica, sans-serif;
   line-height: 1.5;
+}
+
+header {
+  display: flex;
+  background-color: var(--main-color);
+  box-shadow: 0px 10px 20px var(--pale-main-color);
+  color: var(--darkest-main);
 }
 
 nav {
@@ -25,7 +33,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 10px 20px var(--pale-main-color);
 }
 
 nav > ul {
@@ -88,4 +95,23 @@ li:hover {
 
 .big-button {
   width: 100%;
+}
+
+.mobile-section {
+  margin-top: 10vw;
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  background-color: var(--main-color);
+  height: 3rem;
+  box-shadow: 0px 10px 20px var(--pale-main-color);
+}
+
+section > li {
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.mobile-icon {
+  width: 15px;
 }
