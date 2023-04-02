@@ -147,3 +147,15 @@ li:hover {
 .hamburger {
   list-style: none;
 }
+
+/* IMAGE SLIDER SECTION */
+
+.slide-section {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-img {
+  width: 250px;
+}
