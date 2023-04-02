@@ -40,7 +40,6 @@ nav > ul {
   align-items: center;
   gap: 15px;
   list-style: none;
-  margin-right: 3rem;
 }
 
 li {
@@ -99,19 +98,52 @@ li:hover {
 
 .mobile-section {
   margin-top: 10vw;
-  display: grid;
-  place-items: center;
-  grid-auto-flow: column;
   background-color: var(--main-color);
   height: 3rem;
   box-shadow: 0px 10px 20px var(--pale-main-color);
 }
 
-section > li {
+section > ul > li {
   width: 4rem;
   height: 1.5rem;
 }
 
 .mobile-icon {
   width: 15px;
+}
+
+section > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-drop-menu > li {
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.hamburger-drop-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 15px 15px 15px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+.hamburger-drop-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger {
+  list-style: none;
 }
