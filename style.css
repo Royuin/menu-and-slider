@@ -7,6 +7,7 @@
 
 :root {
   --main-color: #dc2626;
+  --lighter-main: #f87171;
   --pale-main-color: #fca5a5;
   --main-white: #fef2f2;
 }
@@ -36,7 +37,7 @@ nav > ul {
 }
 
 li {
-  background-color: var(--pale-main-color);
+  background-color: var(--lighter-main);
   width: 6rem;
   height: 2rem;
   border: none;
@@ -47,7 +48,7 @@ li {
 }
 
 li:hover {
-  box-shadow: inset 0 0 45px var(--main-white);
+  box-shadow: inset 0 0 50px var(--pale-main-color);
   cursor: pointer;
 }
 
@@ -62,13 +63,13 @@ li:hover {
 }
 .hidden {
   opacity: 0;
-  transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in-out;
   pointer-events: none;
 }
 
 .show {
   opacity: 1;
-  transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .drop-down-a {
