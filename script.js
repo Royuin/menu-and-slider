@@ -10,7 +10,7 @@ drop.addEventListener('click', () => {
 
 // Mobile Hamburger Menu
 
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger-drop-down');
 
 hamburger.addEventListener('click', () => {
   const dropDown = document.querySelector('.hamburger-drop-menu');
