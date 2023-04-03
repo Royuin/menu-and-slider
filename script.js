@@ -43,7 +43,20 @@ arrows.forEach((button) => {
       newActiveSlide.classList.remove('hide-slide');
       newActiveSlide.classList += ' active-slide';
     } else if (button.classList.contains('previous')) {
-      -1;
+      const activeSlide = document.querySelector('.active-slide');
+      const currentIndex = slideArray.indexOf(activeSlide);
+      let newIndex;
+      if (currentIndex === 0) {
+        newIndex = slideArray.length - 1;
+      } else {
+        newIndex = currentIndex - 1;
+      }
+      activeSlide.classList.remove('active-slide');
+      activeSlide.classList += ' hide-slide';
+
+      const newActiveSlide = slideArray[newIndex];
+      newActiveSlide.classList.remove('hide-slide');
+      newActiveSlide.classList += ' active-slide';
     }
   });
 });
