@@ -168,3 +168,19 @@ li:hover {
   border: none;
   cursor: pointer;
 }
+
+.hide-slide {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: opacity 300ms ease-in-out;
+}
+
+.slides {
+  position: relative;
+}
+
+.active-slide {
+  opacity: 1;
+  transform: opacity 300ms ease-in-out;
+}
