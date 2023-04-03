@@ -30,8 +30,12 @@ arrows.forEach((button) => {
     if (button.classList.contains('next')) {
       const activeSlide = document.querySelector('.active-slide');
       const currentIndex = slideArray.indexOf(activeSlide);
-      const newIndex = currentIndex + 1;
-
+      let newIndex;
+      if (currentIndex === slideArray.length - 1) {
+        newIndex = 0;
+      } else {
+        newIndex = currentIndex + 1;
+      }
       activeSlide.classList.remove('active-slide');
       activeSlide.classList += ' hide-slide';
 
