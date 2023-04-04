@@ -22,10 +22,20 @@ hamburger.addEventListener('click', () => {
 
 const arrows = document.querySelectorAll('.arrow');
 const slides = document.querySelectorAll('.slide-img');
+const slideArray = Array.from(slides);
+const circleBtns = document.querySelectorAll('.circle');
+const circleArray = Array.from(circleBtns);
+
+function changeSlides(index) {
+  const activeSlide = document.querySelector('.active-slide');
+  activeSlide.classList.remove('active-slide');
+  activeSlide.classList += ' hide-slide';
+  const newActiveSlide = slideArray[index];
+  newActiveSlide.classList.remove('hide-slide');
+  newActiveSlide.classList += ' active-slide';
+}
 
 arrows.forEach((button) => {
-  const slideArray = Array.from(slides);
-
   button.addEventListener('click', () => {
     if (button.classList.contains('next')) {
       const activeSlide = document.querySelector('.active-slide');
@@ -58,5 +68,17 @@ arrows.forEach((button) => {
       newActiveSlide.classList.remove('hide-slide');
       newActiveSlide.classList += ' active-slide';
     }
+  });
+});
+
+circleBtns.forEach((button) => {
+  button.addEventListener('click', () => {
+    const thisIndex = circleArray.indexOf(button);
+    changeSlides(thisIndex);
+
+    const currentActiveCircle = document.querySelector('.active');
+    currentActiveCircle.classList.remove('active');
+
+    button.classList += ' active';
   });
 });
