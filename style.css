@@ -173,12 +173,12 @@ li:hover {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  transform: opacity 300ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
 }
 
 .active-slide {
   opacity: 1;
-  transform: opacity 300ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
 }
 
 .circle-wrapper {
