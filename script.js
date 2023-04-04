@@ -35,28 +35,57 @@ function changeSlides(index) {
   newActiveSlide.classList += ' active-slide';
 }
 
+function nextSlide() {
+  const activeSlide = document.querySelector('.active-slide');
+  const currentIndex = slideArray.indexOf(activeSlide);
+  let newIndex;
+  if (currentIndex === slideArray.length - 1) {
+    newIndex = 0;
+  } else {
+    newIndex = currentIndex + 1;
+  }
+  activeSlide.classList.remove('active-slide');
+  activeSlide.classList += ' hide-slide';
+
+  const newActiveSlide = slideArray[newIndex];
+  newActiveSlide.classList.remove('hide-slide');
+  newActiveSlide.classList += ' active-slide';
+
+  const currentActiveCircle = document.querySelector('.active');
+  currentActiveCircle.classList.remove('active');
+  const newCircle = circleArray[newIndex];
+  newCircle.classList += ' active';
+}
+
+function slideTimeout() {
+  const activeSlide = document.querySelector('.active-slide');
+  const currentIndex = slideArray.indexOf(activeSlide);
+  let newIndex;
+  if (currentIndex === slideArray.length - 1) {
+    newIndex = 0;
+  } else {
+    newIndex = currentIndex + 1;
+  }
+  activeSlide.classList.remove('active-slide');
+  activeSlide.classList += ' hide-slide';
+
+  const newActiveSlide = slideArray[newIndex];
+  newActiveSlide.classList.remove('hide-slide');
+  newActiveSlide.classList += ' active-slide';
+
+  const currentActiveCircle = document.querySelector('.active');
+  currentActiveCircle.classList.remove('active');
+  const newCircle = circleArray[newIndex];
+  newCircle.classList += ' active';
+  setTimeout(slideTimeout, 5000);
+}
+
+setTimeout(slideTimeout, 5000);
+
 arrows.forEach((button) => {
   button.addEventListener('click', () => {
     if (button.classList.contains('next')) {
-      const activeSlide = document.querySelector('.active-slide');
-      const currentIndex = slideArray.indexOf(activeSlide);
-      let newIndex;
-      if (currentIndex === slideArray.length - 1) {
-        newIndex = 0;
-      } else {
-        newIndex = currentIndex + 1;
-      }
-      activeSlide.classList.remove('active-slide');
-      activeSlide.classList += ' hide-slide';
-
-      const newActiveSlide = slideArray[newIndex];
-      newActiveSlide.classList.remove('hide-slide');
-      newActiveSlide.classList += ' active-slide';
-
-      const currentActiveCircle = document.querySelector('.active');
-      currentActiveCircle.classList.remove('active');
-      const newCircle = circleArray[newIndex];
-      newCircle.classList += ' active';
+      nextSlide();
     } else if (button.classList.contains('previous')) {
       const activeSlide = document.querySelector('.active-slide');
       const currentIndex = slideArray.indexOf(activeSlide);
