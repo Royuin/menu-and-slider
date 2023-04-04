@@ -52,6 +52,11 @@ arrows.forEach((button) => {
       const newActiveSlide = slideArray[newIndex];
       newActiveSlide.classList.remove('hide-slide');
       newActiveSlide.classList += ' active-slide';
+
+      const currentActiveCircle = document.querySelector('.active');
+      currentActiveCircle.classList.remove('active');
+      const newCircle = circleArray[newIndex];
+      newCircle.classList += ' active';
     } else if (button.classList.contains('previous')) {
       const activeSlide = document.querySelector('.active-slide');
       const currentIndex = slideArray.indexOf(activeSlide);
@@ -67,6 +72,11 @@ arrows.forEach((button) => {
       const newActiveSlide = slideArray[newIndex];
       newActiveSlide.classList.remove('hide-slide');
       newActiveSlide.classList += ' active-slide';
+
+      const currentActiveCircle = document.querySelector('.active');
+      currentActiveCircle.classList.remove('active');
+      const newCircle = circleArray[newIndex];
+      newCircle.classList += ' active';
     }
   });
 });
